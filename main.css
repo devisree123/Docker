@@ -1,0 +1,979 @@
+/* Reset */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Standards */
+html{
+    font-family: "Nunito", sans-serif;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    background-color: lightblue;
+}
+
+h1{
+    font-size: 60px;
+    color: #bd6165;
+    letter-spacing: 1px;
+    font-family: "Exo 2", sans-serif;
+}
+
+h2{
+    font-size: 40px;
+    font-family: "Exo 2", sans-serif;
+    color: #f4f4f4;
+}
+
+h3{
+    font-size: 25px;
+    font-family: "Exo 2", sans-serif;
+    color: #f4f4f4;
+}
+
+p{
+    font-size: 14px;
+    color: #f4f4f4;
+    line-height: 144%;
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+.container{
+    width: 300px;
+    margin: 0 auto;
+    position: relative;
+}
+
+/* Buttons..... */
+.btn-main{
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 300px;
+}
+
+.btn-main i{
+    position: absolute;
+    font-size: 22px;
+    color: #c19e8d;
+}
+
+.btn-main p{
+    padding-left: 25px;
+    font-size: 16px;
+    color: #c19e8d;
+}
+
+.btn-padding{
+    padding-left: 100px;
+}
+/* ---------- Home ----------- */
+.home{
+    height: 800px;
+    width: 100%;
+    background-image: url("img/cover-bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.bg-overlay{
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(rgba(19,19,19,.2), rgba(19,19,19,1));
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* NAV */
+nav{
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: .5s;
+}
+
+.nav-logo img{
+    width: 140px;
+}
+
+.hamburger{
+    height: 9px;
+    width: 25px;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    display: flex;
+}
+
+.line-1{
+    background-color: #343434;
+    width: 25px;
+    height: 1px;
+}
+
+.line-2{
+    background-color: #343434;
+    width: 15;
+    height: 1px;
+    margin-left: 15px;
+}
+
+.line-3{
+    background-color: #343434;
+    width: 25px;
+    height: 1px;
+}
+
+@media screen and (max-width: 767px){
+    .nav-menu{
+        position: fixed;
+        height: 100vh;
+        width: 100vw;
+        background-color: #1d1d1d;
+        top: 0;
+        left: -100vw;
+        z-index: 100;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: .5s;
+    }
+
+    .show{
+        left: 0;
+    }
+
+    .nav-item{
+        margin-bottom: 10px;
+    }
+
+    .nav-link{
+        font-size: 40px;
+        text-transform: uppercase;
+        position: relative;
+        color: #f4f4f4;
+        transition: .5s;
+    }
+
+    .nav-link::after{
+        content: '';
+        background-color: #bd6165;
+        width: 0%;
+        height: 1px;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 0;
+        transition: .5s;
+    }
+
+    .active{
+        color: #bd6165;
+        position: relative;
+    }
+
+    .active::after{
+        content: '';
+        background-color: #bd6165;
+        width: 100%;
+        height: 1px;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 0;
+    }
+
+    .nav-link:hover::after{
+        width: 100%;
+    }
+
+    .nav-link:hover{
+        color: #bd6165;
+    }
+
+    .close-icon{
+        background-color: #bd6165;
+        width: 30px;
+        height: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 5px;
+        color: #f4f4f4;
+        font-size: 20px;
+        position: absolute;
+        top: 30px;
+        right: 40px;
+        cursor: pointer;
+    }
+}
+
+.nav-joinus{
+    display: none;
+}
+
+/* Home Title */
+.home__title{
+    height: 720px;
+    width: 100%;
+}
+
+.title-content{
+    padding-top: 150px;
+}
+
+.title-content h2{
+    margin-bottom: -5px;
+}
+
+.title-content h1{
+    margin-bottom: 20px;
+}
+
+.title-desc{
+    line-height: 155%;
+    margin-bottom: 25px;
+    font-size: 15px;
+}
+
+/* Social Media */
+.social-media{
+    display: flex;
+    width: 160px;
+    justify-content: space-between;
+    position: absolute;
+    right: 0;
+    bottom: 10px;
+}
+
+.sm-text{
+    font-size: 16px;
+}
+
+.social-media a i{
+    font-size: 24px;
+    color: #f4f4f4;
+}
+
+/* ---------- About ----------- */
+.about{
+    background-color: #131313;
+    padding: 50px 0;
+}
+
+.about__content{
+    display: flex;
+    flex-direction: column;
+}
+
+.about__title{
+    width: 200px;
+    margin-bottom: 20px;
+}
+
+.about__undertitle{
+    color: #c19e8d;
+    font-weight: 300;
+    width: 295px;
+    margin-bottom: 5px;
+    font-size: 16px;
+}
+
+/* ---------- Exploring ----------- */
+.exploring{
+    background-color: #1d1d1d;
+    position: relative;
+    padding: 100px 0 30px;
+}
+
+.exploring__vector{
+    width: 100%;
+    position: absolute;
+    top: -1px;
+}
+
+.exploring__title{
+    margin-bottom: 15px;
+}
+
+.exploring__desc{
+    margin-bottom: 50px;
+}
+
+.rows{
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;
+}
+
+.col{
+    background-color: #131313;
+    width: 300px;
+    height: 430px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 15px rgba(255,255,255,.25);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.col-under{
+    height: 410px;
+    width: 280px;
+    background-color: #1d1d1d;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.under-img{
+    width: 280px;
+    height: 180px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.sightseeing{
+    background-image: url("img/sightseeing.png");
+    background-size: cover;
+    background-position: bottom;
+}
+
+.camping{
+    background-image: url("img/camping.png");
+    background-size: cover;
+    background-position: bottom;
+}
+
+.hiking{
+    background-image: url("img/hiking.png");
+    background-size: cover;
+    background-position: bottom;
+}
+
+.under-content{
+    position: relative;
+    text-align: center;
+    width: 280px;
+    height: 230px;
+}
+
+.col-title{
+    margin: 20px 0 10px;
+}
+
+.col-desc{
+    margin-bottom: 20px;
+}
+
+.number{
+    position: absolute;
+    bottom: 0;
+    right: 15px;
+    color: #292929;
+    font-size: 80px;
+    font-family: "Outfit", sans-serif;
+}
+
+/* ---------- Footer ----------- */
+footer{
+    position: relative;
+    padding: 80px 0 110px;
+    background-color: #1d1d1d;
+    overflow-y: hidden;
+}
+
+.footer__mountains{
+    width: 100%;
+    height: 85px;
+    background: url("img/mountain-small.png");
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.footer{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.footer__adress{
+    margin-bottom: 30px;
+}
+
+.footer__logo{
+    margin-bottom: 10px;
+}
+
+.footer__title{
+    color: #f4f4f4;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.footer__list li{
+    margin-bottom: 5px;
+}
+
+.footer__list li a{
+   color: #404040; 
+}
+
+.footer__flex{
+    display: flex;
+    justify-content: space-between;
+}
+
+.social-media-links{
+    display: none;
+}
+
+/* -------------------------------------- */
+/* ----------Media Query 768px----------- */
+/* -------------------------------------- */
+
+@media screen and (min-width: 768px) {
+    /* Standards */
+    h1{
+        font-size: 80px;
+    }
+
+    h2{
+        font-size: 55px;
+    }
+
+    h3{
+        font-size: 35px;
+    }
+
+    p{
+        font-size: 16px;
+    }
+
+    .container{
+        width: 700px;
+    }
+
+    .close-icon{
+        display: none;
+    }
+
+    .hamburger{
+        display: none;
+    }
+
+    /* Buttons.... */
+    .btn-main p{
+        padding-left: 30px;
+        font-size: 20px;
+    }
+
+    /* --------- Home 768px ----------- */
+    .home{
+        height: 920px;
+    }
+
+    nav{
+        height: 90px;
+    }
+
+    .nav-logo img{
+        width: 170px;
+    }
+
+    .nav-menu{
+        display: flex;
+        width: 270px;
+        justify-content: space-between;
+        margin-right: 150px;
+    }
+
+    .nav-item:last-child{
+        display: none;
+    }
+
+    .nav-link{
+        color: #343434;
+        transition: .5s;
+        position: relative;
+    }
+
+    .nav-link:hover{
+        color: #bd6165;
+    }
+
+    .nav-link::after{
+        content: '';
+        position: absolute;
+        height: 6px;
+        width: 6px;
+        background-color: #bd6165;
+        border-radius: 50%;
+        left: 50%;
+        transform: translateX(-50%);
+        top: -7px;
+        transition: .5s;
+        opacity: 0;
+    }
+
+    .nav-link:hover::after{
+        opacity: 1;
+    }
+
+    .nav-joinus{
+        display: block;
+        width: 125px;
+        height: 45px;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+    .joinus-link{
+        height: 100%;
+        width: 100%;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        background-color: #c19e8d;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        z-index: 2;
+    }
+
+    .joinus-link p{
+        font-size: 17px;
+    }
+
+    .nav-joinus::after{
+        content: '';
+        background-color: #B09181;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        position: absolute;
+        width: 125px;
+        height: 45px;
+        top: 5px;
+        right: -5px;
+        transition: .5s;
+    }
+
+    .nav-joinus:hover::after{
+        top: -5px;
+        right: 5px;
+    }
+
+    /* Home Title */
+    .home__title{
+        height: 830px;
+    }
+
+    .title-content{
+        padding-top: 180px;
+    }
+
+    .title-desc{
+        font-size: 17px;
+        width: 410px;
+    }
+
+    /* Social Media */
+    .social-media{
+        width: 200px;
+    }
+
+    .sm-text{
+        font-size: 18px;
+    }
+
+    .social-media a i{
+        font-size: 28px;
+    }
+
+    /* ------ About 768px -------- */
+    .about{
+        padding: 80px 0;
+    }
+
+    .about__content{
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .about__title{
+        width: 400px;
+        margin-bottom: 0;
+    }
+
+    .about__undertitle{
+        font-size: 20px;
+        width: 445px;
+        text-align: right;
+        float: right;
+    }
+
+    .about__desc{
+        float: right;
+        text-align: right;
+        width: 400px;
+    }
+
+    /* -------- Exploring 768px --------- */
+    .exploring{
+        padding: 120px 0 30px
+    }
+
+    .exploring__title{
+        text-align: right;
+    }
+
+    .exploring__desc{
+        text-align: right;
+        margin-bottom: 70px;
+        width: 500px;
+        float: right;
+    }
+
+    .rows{
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        clear: right;
+    }
+
+    .col{
+        width: 330px;
+        height: 470px;
+    }
+
+    .col-under{
+        width: 310px;
+        height: 450px;
+    }
+
+    .under-img{
+        width: 310px;
+        height: 180px;
+    }
+
+    .under-content{
+        width: 310px;
+        height: 270px;
+    }
+
+    .col-title{
+        font-size: 30px;
+    }
+
+    .col-desc{
+        font-size: 15px;
+    }
+
+    .number{
+        font-size: 100px;
+    }
+
+    /* -------- Footer 768px --------- */
+    footer{
+        padding: 80px 0 180px
+    }
+
+    .footer__mountains{
+        background: url("img/mountain-big.png");
+        height: 220px;
+        background-size: cover;
+        bottom: -60px;
+    }
+
+    .footer{
+        justify-content: space-between;
+    }
+
+    .footer__title{
+        font-size: 18px;
+    }
+
+    .social-media-links{
+        display: block;
+    }
+
+    .footer__social-media a{
+        color: #404040;
+        font-size: 26px;
+    }
+
+    .bxl-instagram{
+        margin-right: 10px;
+    }
+
+}
+
+
+/* -------------------------------------- */
+/* ----------Media Query 1150px----------- */
+/* -------------------------------------- */
+@media screen and (min-width: 1150px) {
+    /* Standards */
+    h3{
+        font-size: 50px;
+    }
+
+    p{
+        font-size: 17px;
+    }
+
+    .container{
+        width: 1024px;
+    }
+
+    /* Buttons.... */
+    .btn-main p{
+        padding-left: 0;
+        font-size: 20px;
+        transition: .5s;
+    }
+
+    .btn-main i{
+        opacity: 0;
+        transition: .5s;
+    }
+
+    .btn-main:hover i{
+        opacity: 1;
+    }
+
+    .btn-main:hover p{
+        padding-left: 30px;
+    }
+
+    /* -------- Home 1150px ---------- */
+    .home{
+        height: 750px;
+    }
+
+    /* NAV */
+    nav{
+        height: 80px;
+    }
+
+    .nav-menu{
+        width: 300px;
+    }
+
+    .nav-link{
+        font-size: 18px;
+    }
+
+    /* Home Title 1150px */
+    .home__title{
+        height: 750px;
+    }
+
+    .title-content{
+        padding-top: 140px;
+    }
+
+    /* About 1150px */
+    .about__title{
+        width: 450px;
+    }
+
+    .about__undertitle{
+        font-size: 22px;
+    }
+
+    .about__desc{
+        width: 550px;
+    }
+
+    /* -------- exploring 1150px ---------- */
+    .exploring{
+        padding: 180px 0 30px;
+    }
+
+    .exploring__desc{
+        text-align: right;
+        margin-bottom: 70px;
+        width: 600px;
+    }
+
+    /* -------- Footer 1150px ---------- */
+    .footer__flex{
+        justify-content: initial;
+    }
+
+    .footer__list{
+        margin-right: 150px;
+    }
+
+    .footer__title{
+        font-size: 22px;
+    }
+
+    .footer__list li a{
+        font-size: 18px;
+    }
+
+}
+
+/* -------------------------------------- */
+/* ----------Media Query 1300px----------- */
+/* -------------------------------------- */
+@media screen and (min-width: 1300px) {
+    /* Standards */
+    h1{
+        font-size: 110px;
+    }
+
+    h2{
+        font-size: 80px;
+    }
+
+    h3{
+        font-size: 60px;
+    }
+
+    p{
+        font-size: 20px;
+    }
+
+    .container{
+        width: 1300px;
+    }
+
+    /* Buttons.... */
+    .btn-padding{
+        padding-left: 130px;
+    }
+
+    /* ------ Home 1300px ------ */
+    .home{
+        height: 900px;
+        background-position: center;
+        background-image: url(img/cover-bg-big.png);
+    }
+
+    /* NAV */
+    nav{
+        height: 100px;
+    }
+
+    .nav-menu{
+        width: 400px;
+    }
+
+    .nav-link{
+        font-size: 20px;
+    }
+
+    /* Home Title */
+    .home__title{
+        height: 800px;
+    }
+
+    .title-desc{
+        font-size: 20px;
+        width: 600px;
+    }
+
+    /* ------ About 1300px ------ */
+    .about__title{
+        width: 500px;
+    }
+
+    .about__undertitle{
+        font-size: 30px;
+        width: 600px;
+        margin-bottom: 20px;
+    }
+
+    .about__desc{
+        width: 600px;
+    }
+
+    /* ------ Exploring 1300px ------ */
+    .exploring{
+        padding: 240px 0 30px;
+    }
+
+    .exploring__desc{
+        width: 600px;
+    }
+
+    .col{
+        width: 400px;
+        height: 550px;
+    }
+
+    .col-under{
+        width: 370px;
+        height: 520px;
+    }
+
+    .under-img{
+        height: 210px;
+        width: 370px;
+    }
+
+    .under-content{
+        width: 370px;
+        height: 310px;
+    }
+
+    .col-title{
+        font-size: 40px;
+        margin-bottom: 20px;
+    }
+
+    .col-desc{
+        font-size: 18px;
+        padding: 0 5px
+    }
+
+    /* ------ Footer 1300px ------ */
+    .footer__logo img{
+        width: 200px;
+    }
+
+    .footer__title{
+        font-size: 24px;
+    }
+
+    .footer__list li a{
+        font-size: 20px;
+    }
+
+    .social-media-links a i{
+        font-size: 30px;
+    }
+
+    .footer__list{
+        margin-right: 200px;
+    }
+
+    .footer__mountains{
+        background: url("img/mountain-biggest.png");
+    }
+
+
+
+    
+
+}
